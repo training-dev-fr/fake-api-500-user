@@ -21,3 +21,8 @@ exports.getById = (req, res, next) => {
     let product = data.find(product => product.id == req.params.id);
     res.status(200).json(product);
 }
+
+exports.delete = (req, res, next) => {
+    data = data.filter(product => product.id !== req.params.id);
+    res.status(200).json({success: true});
+}

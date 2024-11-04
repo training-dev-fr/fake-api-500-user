@@ -7,4 +7,6 @@ router.post('/:page', productController.getList);
 
 router.get('/:id', productController.getById);
 
+router.delete('/:id',productController.delete);
+
 module.exports = router;
