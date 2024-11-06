@@ -1,13 +1,11 @@
-const data = require('./../data/product.json');
+let data = require('./../data/product.json');
 
 exports.getList = (req, res, next) => {
     let result = [...data];
     if (req.body.terms) {
         for (let term of req.body.terms) {
-            result = result.filter(user =>
-                user.firstName.toLowerCase().includes(term.toLowerCase()) ||
-                user.lastName.toLowerCase().includes(term.toLowerCase()) ||
-                user.jobTitle.toLowerCase().includes(term.toLowerCase())
+            result = result.filter(product =>
+                product.name.toLowerCase().includes(term.toLowerCase())
             )
         }
     }

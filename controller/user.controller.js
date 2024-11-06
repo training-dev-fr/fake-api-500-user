@@ -1,4 +1,4 @@
-const data = require('./../data/users.json');
+let data = require('./../data/users.json');
 
 exports.getList = (req, res, next) => {
     let result = [...data];
