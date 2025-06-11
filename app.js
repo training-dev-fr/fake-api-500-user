@@ -18,4 +18,6 @@ app.use('/images', express.static(path.join(__dirname, "images")));
 app.use('/user', userRoute);
 app.use('/product', productRoute);
 
+console.log("test")
+
 module.exports = app;
