@@ -36,8 +36,7 @@ exports.create = (req, res, next) => {
         "firstName",
         "lastName",
         "jobTitle",
-        "email",
-        "imageUrl",
+        "email"
     ];
 
     for (const field of requiredFields) {
