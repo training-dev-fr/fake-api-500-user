@@ -32,7 +32,6 @@ exports.create = (req, res, next) => {
     let user = req.body;
     // Vérification de la présence des champs
     const requiredFields = [
-        "id",
         "firstName",
         "lastName",
         "jobTitle",
