@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const userRoute = require("./route/user.route");
+const authRoute = require("./route/auth.route");
 const productRoute = require("./route/product.route");
 const app = express();
 
@@ -17,7 +18,7 @@ app.use('/images', express.static(path.join(__dirname, "images")));
 
 app.use('/user', userRoute);
 app.use('/product', productRoute);
+app.use('/auth', authRoute);
 
-console.log("test")
 
 module.exports = app;
